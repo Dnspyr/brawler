@@ -3,13 +3,8 @@
 <head>
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script type="module">
-      import { fairyDustCursor } from "https://unpkg.com/cursor-effects@1.0.15/dist/esm.js";  new fairyDustCursor();
-    new cursoreffects.fairyDustCursor({
-window.addEventListener("load", (event) => {
+  import { fairyDustCursor } from "https://unpkg.com/cursor-effects@1.0.15/dist/esm.js";  new fairyDustCursor();
   new cursoreffects.fairyDustCursor();
-const targetElement = document.querySelector("#cursor");
-new cursoreffects.fairyDustCursor({ element: targetElement });
-});
   colors: [
 	  "#FF0000#FF2000", "#FF2000#FF0000",
            "#FF4000#FF2000", "#FF5F00#FF4000",
@@ -20,6 +15,8 @@ new cursoreffects.fairyDustCursor({ element: targetElement });
            "#00FF00#40FF00", "#00AA55#00FF00",
            "#0055AA#00AA55", "#0000FF#0055AA"
           ]
+});
+
 });
     </script>
 
@@ -59,14 +56,27 @@ new cursoreffects.fairyDustCursor({ element: targetElement });
             display: none;
         }
 
-        .container {
-            position: relative;
-            z-index: 1;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 100px;
-        }
+      body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1a1a1a;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
 
         .profile-pic img {
             border-radius: 50%;
@@ -87,7 +97,6 @@ new cursoreffects.fairyDustCursor({ element: targetElement });
 </head>
 <body>
     
-    <div id="#cursor"> 
     <div id="particles-js"></div> 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
@@ -117,7 +126,6 @@ new cursoreffects.fairyDustCursor({ element: targetElement });
             </a>
         </div>
     </section>
-</div>
 </div>
 
 <script>

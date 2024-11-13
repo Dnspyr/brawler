@@ -11,19 +11,19 @@ body {
     line-height: 1.6;
 }
 
- .container {
+.container {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
     font-family: Arial, sans-serif;
     background: linear-gradient(90deg, #00FFE0, #2FCCE6, #5E99EC, #8D66F3, #BC33F9, #EB00FF);
-    color: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); 
 }
+
 
 .bio {
     display: flex;

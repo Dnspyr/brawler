@@ -11,11 +11,19 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
+  .container {
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: gray;
+        font-size: 21px;
+        background: linear-gradient(90deg, #00FFE0, #2FCCE6, #5E99EC, #8D66F3, #BC33F9, #EB00FF);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
 .bio {
     display: flex;

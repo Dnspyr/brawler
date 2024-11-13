@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title id="title"></title>
- <meta property="og:image" content="assets/logo.svg">
+ <meta property="og:image" content="assets/logo.png">
     <script>
         let titleElement = document.getElementById("title");
         let titleArray = ["@"+"brawl","@"+"braw","@"+"bra","@"+"br","@"+"b"];
@@ -38,43 +38,46 @@
             display: none;
         }
 
-      body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #1a1a1a;
-    overflow: hidden; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
+   body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #1a1a1a;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.container {
-    position: relative;
-    z-index: 1;
-    color: gray;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px; 
-    padding-bottom: 50px;
-}
+    .container {
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: gray;
+        font-size: 21px;
+        background: linear-gradient(90deg, #00FFE0, #2FCCE6, #5E99EC, #8D66F3, #BC33F9, #EB00FF);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
- .no-select {
-    user-select: none;
-}
+    .no-select {
+        user-select: none;
+    }
 
+    .profile-pic img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
 
-        .profile-pic img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        .bio-info p {
-            font-size: 21px;
-            color: #fff;
-            text-shadow: 1px 1px 8px #000;
-        }
+    .bio-info p {
+        font-size: 21px;
+        color: #fff;
+        text-shadow: 1px 1px 8px #000;
+    }
 
         .bio-info p span {
             color: #00FFE0;

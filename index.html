@@ -113,8 +113,13 @@ particlesJS("particles-js", {"particles":{"number":{"value":400,"density":{"enab
 </script>
 <script type="module">
   import { snowflakeCursor } from "https://unpkg.com/cursor-effects@1.0.15/dist/esm.js";
-
-  new snowflakeCursor();
+  function IsMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+  if (!IsMobile()) {
+      new snowflakeCursor();
+  }
 </script>
+
 </body>
 </html>

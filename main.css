@@ -17,7 +17,7 @@ body {
     padding: 20px;
 }
 
-.info {
+.bio {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -27,7 +27,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pfp img {
+.profile-pic img {
     width: 150px;
     height: 150px;
     border-radius: 50%;

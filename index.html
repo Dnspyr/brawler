@@ -1,1 +1,33 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title"></title>
+    <script>
+        let titleElement = document.getElementById("title");
+        let titleArray = ["@"+"b","r","a","w","l",".","brawl",".","brawl","braw","bra","br","b","...","brawl","wl","bra","brawl"];
+        let titleIndex = 0;
+        setInterval(function() {
+            titleElement.textContent = titleArray[titleIndex];
+            titleIndex = (titleIndex + 1) % titleArray.length;
+        }, 300);
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta property="og:description" content="A website for my social pages. Made By Brawl">
+  <style>
+     .header {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="bio">
+            <div class="profile-pic">
+                <img src="assets/profile.jpg" alt="Profile Picture">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

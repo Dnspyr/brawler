@@ -107,6 +107,32 @@
         </div>
     </section>
 </div>
+    <audio id="background-music" autoplay loop>
+        <source src="assets/Darius Stim Anthem.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="mute-btn" id="mute-button">
+        <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M9 9H5v6h4l5 5V4L9 9zm11.707.293l-1.414 1.414A6.936 6.936 0 0 1 20 12c0 1.357-.378 2.622-1.025 3.707l1.414 1.414A8.936 8.936 0 0 0 22 12c0-1.792-.526-3.456-1.293-4.707zM16.5 12a3.496 3.496 0 0 0-.975-2.475l-1.414 1.414c.304.304.49.715.49 1.061s-.186.757-.49 1.061l1.414 1.414c.598-.598.975-1.52.975-2.475zm-2.95 5.536l-1.41-1.41A5.966 5.966 0 0 1 12 18c0 .836-.214 1.639-.59 2.352l1.414 1.414A7.937 7.937 0 0 0 16 18c0-.79-.18-1.53-.5-2.207z"/>
+        </svg>
+    </button>
+
+    <script>
+        const music = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
+        const muteIcon = document.getElementById('mute-icon');
+
+        muteButton.addEventListener('click', () => {
+            if (music.muted) {
+                music.muted = false;
+                muteIcon.innerHTML = `<path d="M9 9H5v6h4l5 5V4L9 9z"/>`;
+            } else {
+                music.muted = true;
+                muteIcon.innerHTML = `<path d="M9 9H5v6h4l5 5V4L9 9zm11.707.293l-1.414 1.414A6.936 6.936 0 0 1 20 12c0 1.357-.378 2.622-1.025 3.707l1.414 1.414A8.936 8.936 0 0 0 22 12c0-1.792-.526-3.456-1.293-4.707zM16.5 12a3.496 3.496 0 0 0-.975-2.475l-1.414 1.414c.304.304.49.715.49 1.061s-.186.757-.49 1.061l1.414 1.414c.598-.598.975-1.52.975-2.475z"/>`;
+            }
+        });
+    </script>
 
 <script>
 particlesJS("particles-js", {"particles":{"number":{"value":400,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":10,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":6,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;

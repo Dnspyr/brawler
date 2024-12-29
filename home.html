@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:description" content="Landing Page For My Website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script>
+        let titleElement = document.getElementById("title"); 
+        let titleArray = ["H"+"o"+"m"+"e"];
+        let titleIndex = 0;
+        setInterval(function() {
+            titleElement.textContent = titleArray[titleIndex];
+            titleIndex = (titleIndex + 1) % titleArray.length;
+        }, 300);
+        
+        function openTab(tabName) {
+            const tabContent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .tabs {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tabs button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .tabs button.active {
+            background-color: #666;
+        }
+        .tab-content {
+            display: none;
+            margin: 50px;
+        }
+        #Bios {
+            display: block; /* Default tab */
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button onclick="openTab('Bios')" class="active">Bios</button>
+        <button onclick="openTab('Projects')">Projects</button>
+    </div>
+    <div id="Bios" class="tab-content">
+        <h2>Bios</h2>
+        <p>Welcome to the Bios section. Add your bio information here.</p>
+    </div>
+    <div id="Projects" class="tab-content">
+        <h2>Projects</h2>
+        <p>Welcome to the Projects section. Showcase your projects here.</p>
+    </div>
+</body>
+</html>
